@@ -1,0 +1,34 @@
+/*Exercício
+Criar uma database chamada academia, com 3 tabelas como seguem:
+
+Aluno
+|Codigo_aluno|Nome|
+
+Atividade
+|Codigo|Descrição|IMC|
+
+Atividade
+codigo      descricao                           imc
+----------- ----------------------------------- --------
+1           Corrida + Step                       18.5
+2           Biceps + Costas + Pernas             24.9
+3           Esteira + Biceps + Costas + Pernas   29.9
+4           Bicicleta + Biceps + Costas + Pernas 34.9
+5           Esteira + Bicicleta                  39.9                                                                                                                                                                    
+
+Atividadesaluno
+|Codigo_aluno|Altura|Peso|IMC|Atividade|
+
+IMC = Peso (Kg) / Altura² (M)
+
+Atividade: Buscar a PRIMEIRA atividade referente ao IMC imediatamente acima do calculado.
+* Caso o IMC seja maior que 40, utilizar o código 5.
+
+Criar uma Stored Procedure (sp_alunoatividades), com as seguintes regras:
+ - Se, dos dados inseridos, o código for nulo, mas, existirem nome, altura, peso, deve-se inserir um 
+ novo registro nas tabelas aluno e aluno atividade com o imc calculado e as atividades pelas 
+ regras estabelecidas acima.
+ - Se, dos dados inseridos, o nome for (ou não nulo), mas, existirem código, altura, peso, deve-se 
+ verificar se aquele código existe na base de dados e atualizar a altura, o peso, o imc calculado e 
+ as atividades pelas regras estabelecidas acima.
+*/
